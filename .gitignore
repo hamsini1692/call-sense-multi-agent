@@ -1,0 +1,102 @@
+# ------------------------------
+# PYTHON 
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pyc
+*.log
+*.tmp
+*.bak
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ------------------------------
+# ENVIRONMENT / SENSITIVE FILES
+# ------------------------------
+.env
+.env.local
+*.pem
+*.key
+secrets.json
+
+# ------------------------------
+# STREAMLIT
+# ------------------------------
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# Streamlit cache
+.streamlit/
+.streamlit/cache/
+.streamlit/state.json
+
+# ------------------------------
+# FASTAPI / UVICORN
+# ------------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# ------------------------------
+# GOOGLE ADK / VERTEX AI
+# ------------------------------
+*.token
+*.json
+*.yaml~
+token.json
+credentials.json
+
+agent_logs/
+memory_bank/
+artifacts/
+*.trace
+.logs/
+
+# ------------------------------
+# NODE / BUNDLED CONTENT
+# ------------------------------
+node_modules/
+npm-debug.log
+
+# ------------------------------
+# BUILD & DEPLOY
+# ------------------------------
+dist/
+build/
+site/
+*.egg-info/
+*.whl
+
+# Docker / Cloud
+docker-compose*.yml
+*.dockerfile
+.Dockerfile.swp
+
+# ------------------------------
+# CACHE / TEMP FILES
+# ------------------------------
+*.cache
+.cache/
+tmp/
+temp/
+logs/

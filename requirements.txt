@@ -1,0 +1,10 @@
+google-adk
+google-genai
+fastapi
+uvicorn[standard]
+streamlit
+python-dotenv
+pydantic
+requests
+prometheus-client
+a2a-sdk
