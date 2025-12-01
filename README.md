@@ -91,12 +91,16 @@ A Google API key with access to Gemini + ADK
 ## 6. Setup Instructions
 
 6.1 clone the repository 
+
 git clone https://github.com/hamsini1692/call-sense-multi-agent.git
+
 cd call-sense-multi-agent
 
 6.2. Create and activate a virtual environment (recommended)
+
 python -m venv .venv
 source .venv/bin/activate      # macOS / Linux
+
 # .venv\Scripts\activate       # Windows PowerShell
 
 6.3. Install dependencies
