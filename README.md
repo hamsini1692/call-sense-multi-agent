@@ -112,14 +112,19 @@ Create a .env file in the project root (do not commit this file):
 touch .env
 
 7. Running the Application
+8. 
    7.1 You will run backend (FastAPI) and frontend (Streamlit) in separate terminals.
-   Backend: 
-   uvicorn backend.main:app --reload
+   
+   Backend:
+       
+         uvicorn backend.main:app --reload
 
    7.2. Start the frontend (Streamlit)
-   streamlit run frontend/app.py
 
-8. A2A Communication Test
+   Frontend:
+         streamlit run frontend/app.py
+
+10. A2A Communication Test
    python test_a2a.py
 
 
