@@ -63,6 +63,53 @@ High-level components:
 
 ---
 
+## Detailed Implementation Plan
+
+The implementation incorporates several important capabilities that strengthen the reliability and practicality of the system:  
+
+**1. Multi-Agent Architecture (Sequential LLM Agents)**
+
+The system uses three sequential agents powered by Gemini, each focused on a specific task: summarizing the call, assessing emotional tone and frustration, and recommending next actions or escalation.
+This specialization improves accuracy and avoids overloading a single model.
+
+**2. Agent-to-Agent Communication**
+
+Agents communicate through A2A messaging.
+The summary from the first agent is passed to the second, and the emotional analysis is then handed to the final decision-making agent.
+This creates a smooth reasoning flow, reduces hallucinations, and keeps the pipeline interpretable.
+
+**3. Tools and Backend Integration**
+
+Backend utilities support the overall pipeline by validating transcripts, routing requests via FastAPI, combining agent outputs, and offering helper functions used throughout the workflow.
+This ensures stable, production-ready behavior.
+
+**4. Sessions and Memory**
+
+Each agent’s output is preserved as short-term memory during the workflow.
+The summary, emotional analysis, and recommended actions are reused downstream, enabling stateful reasoning and keeping each step traceable.
+
+**5. Context Engineering**
+
+To maintain efficiency, the system compacts context by passing focused summaries and distilled details instead of full transcripts between agents.
+This reduces token usage and improves downstream accuracy.
+
+**6. Observability and Logging**
+
+The backend provides structured logging for agent start/end events, intermediate outputs, escalation decisions, and error conditions.
+This transparency simplifies debugging and monitoring.
+
+**7. Evaluation and Testing**
+
+The system was validated on multiple sample transcripts to ensure accurate extraction of concerns, correct frustration detection, appropriate escalation, and consistent agent outputs.
+These tests confirm reliability across the full pipeline.
+
+**8. Deployment-Ready Architecture**
+
+The design can be deployed on Cloud Run, Vertex AI Agent Engine, or any Docker-based platform.
+The clear separation of frontend, backend, and agents supports future scaling and integration.
+Here is the exact implementation sequence followed while building CallSense.
+This can also serve as reproducibility documentation.
+
 ## 4. Repository Structure
 
 ```text
