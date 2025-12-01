@@ -122,6 +122,7 @@ touch .env
    7.2. Start the frontend (Streamlit)
 
    Frontend:
+   
          streamlit run frontend/app.py
 
 10. A2A Communication Test
